@@ -1,16 +1,12 @@
 name: Self-hosted runner test
 
 on:
-  push:
   workflow_dispatch:
 
 jobs:
   test-on-self-hosted:
-    runs-on: [self-hosted, macOS, lab]
-
+    runs-on: [self-hosted]
     steps:
-      - name: Say hello from self-hosted
-        run: |
-          echo "Hola desde mi Mac 🚀"
-          sw_vers
+      - name: Say hello
+        run: echo "Hola desde un EPHEMERAL runner 🚀"
 
