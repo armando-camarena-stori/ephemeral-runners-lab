@@ -1,0 +1,15 @@
+name: Self-hosted runner test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test-on-self-hosted:
+    runs-on: [self-hosted, macOS, lab]
+
+    steps:
+      - name: Say hello from self-hosted
+        run: |
+          echo "Hola desde mi Mac 🚀"
+          uname -a
