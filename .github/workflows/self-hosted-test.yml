@@ -2,7 +2,7 @@ name: Self-hosted runner test
 
 on:
   push:
-    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   test-on-self-hosted:
@@ -12,4 +12,5 @@ jobs:
       - name: Say hello from self-hosted
         run: |
           echo "Hola desde mi Mac 🚀"
-          uname -a
+          sw_vers
+
